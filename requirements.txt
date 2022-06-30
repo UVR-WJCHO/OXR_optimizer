@@ -1,0 +1,11 @@
+tensorflow==1.12
+pyrender
+chumpy
+numpy
+matplotlib
+scikit-image
+transforms3d
+tqdm
+opencv-python
+cython
+open3d
