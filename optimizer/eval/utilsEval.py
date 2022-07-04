@@ -126,14 +126,14 @@ def showHandJoints(imgInOrg, gtIn, estIn=None, filename=None, upscale=1, lineThi
             else:
                 joint_color = map(lambda x: x + 35 * (joint_num % 4), joint_color_code[color_code_num])
 
-            cv2.circle(imgIn, center=(gtIn[joint_num][0], gtIn[joint_num][1]), radius=3, color=joint_color, thickness=-1)
+            cv2.circle(imgIn, center=(int(gtIn[joint_num][0]), int(gtIn[joint_num][1])), radius=3, color=joint_color, thickness=-1)
         else:
             if PYTHON_VERSION == 3:
                 joint_color = list(map(lambda x: x + 35 * (joint_num % 4), joint_color_code[color_code_num]))
             else:
                 joint_color = map(lambda x: x + 35 * (joint_num % 4), joint_color_code[color_code_num])
 
-            cv2.circle(imgIn, center=(gtIn[joint_num][0], gtIn[joint_num][1]), radius=3, color=joint_color, thickness=-1)
+            cv2.circle(imgIn, center=(int(gtIn[joint_num][0]), int(gtIn[joint_num][1])), radius=3, color=joint_color, thickness=-1)
 
     for limb_num in range(len(limbs)):
 
